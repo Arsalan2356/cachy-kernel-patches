@@ -1,0 +1,20 @@
+diff --git a/flake.nix b/flake.nix
+index f372bb5..e0fd239 100644
+--- a/flake.nix
++++ b/flake.nix
+@@ -9,15 +9,6 @@
+     };
+   };
+ 
+-  nixConfig = {
+-    extra-substituters = [
+-      "https://attic.xuyh0120.win/lantian"
+-    ];
+-    extra-trusted-public-keys = [
+-      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+-    ];
+-  };
+-
+   outputs =
+     { self, flake-parts, ... }@inputs:
+     flake-parts.lib.mkFlake { inherit inputs; } (
